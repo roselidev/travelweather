@@ -28,5 +28,12 @@ class CityResponse(BaseModel):
     cities: Optional[List[str]] = None
 
 
+class WeatherParams(BaseModel):
+    country: str
+    city: str
+    start_month: int
+    end_month: int
+
+
 class WeatherResponse(BaseModel):
     pass
