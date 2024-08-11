@@ -3,6 +3,8 @@ from collections import defaultdict
 
 from meteostat import Monthly, Point, Stations
 
+from weather.utils import cmp_inputs
+
 from const.const import contries_cities
 
 
@@ -49,6 +51,7 @@ def get_specific_weather(country, city, start_month, end_month, years=10):
     
     datas = defaultdict(lambda: defaultdict(float))
     year = datetime.now().year
+    country, city = cmp_inputs(country, city)
 
     # Fetch weather data for the last 3 years
     for i in range(1, years+1):
