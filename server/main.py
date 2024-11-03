@@ -10,8 +10,7 @@ def create_server():
     
     # CORS 허용 설정
     origins = [
-        "http://localhost:5173",  # 특정 도메인만 허용하고 싶을 때
-        # "*"  # 모든 도메인을 허용하려면 이 줄을 사용합니다.
+        "front"
     ]
 
     app.add_middleware(
