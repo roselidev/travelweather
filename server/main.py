@@ -10,7 +10,7 @@ def create_server():
     
     # CORS 허용 설정
     origins = [
-        "front"
+        "*"
     ]
 
     app.add_middleware(
