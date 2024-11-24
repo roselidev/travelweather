@@ -6,7 +6,7 @@ from weather.schemas import CityParams, CityResponse, WeatherParams
 from weather.service import get_city_suggestion, get_specific_weather
 
 
-weather_router = APIRouter(prefix = "")
+weather_router = APIRouter(prefix = "/api")
 
 @weather_router.get(path = "/citysuggest", status_code = 200)#, response_model = CityResponse)
 async def city_suggestion(params: CityParams = Depends()):
